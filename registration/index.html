@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/>
+        <link rel="stylesheet" href="/css/flipclock.css">
+        <link rel="stylesheet" href="/css/canvas.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>NIT Trichy | International Conference</title>
+    </head>
+    <body>
+        <div id="canvas"></div>
+        <!-- blue-grey lighten-5 -->
+        <div class="container">
+            <div>
+                <!--<div class="row">
+                    <div class="col s8">
+                        <img src="/images/logo.png" style="position:relative;height:120px">
+                        <img src="/images/nitlogo.png" style="margin-left:50px;position:relative;height:120px">
+                    </div>
+                    <div class="col s4">
+                        <div class="valign-wrapper" style="margin-top:50px">
+                            <div id="countdown" style="zoom:0.37"></div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+            <ul id="dropdown_home" class="dropdown-content" style="z-index:100">
+                <li><a href="/icdmsdrc">About ICDMSDRC</a></li>
+                <li class="divider"></li>
+                <li><a href="/nittrichy">About NIT Trichy</a></li>
+            </ul>
+            <ul id="dropdown_themes" class="dropdown-content" style="z-index:100">
+                <li><a href="/speakers">Speakers</a></li>
+            </ul>
+            <ul id="dropdown_reg" class="dropdown-content" style="z-index:100">
+                <li><a href="/abstractsubmission">Abstract Submission</a></li>
+            </ul>
+            <ul id="dropdown_comm" class="dropdown-content" style="z-index:100">
+                <li><a href="/organizing">Organizing Committee</a></li>
+                <li class="divider"></li>
+                <li><a href="/technical">Technical Advisory Committee</a></li>
+            </ul>
+            <ul id="dropdown_contacts" class="dropdown-content" style="z-index:100">
+                <li><a href="/accomodation">Accomodation For Conference</a></li>
+                <li class="divider"></li>
+                <li><a href="/reachtrichy">How to Reach Trichy</a></li>
+            </ul>
+
+            <nav>
+                <div class="nav-wrapper white">
+                    <a href="#" data-activates="mobile-nav" class="waves-effect button-collapse right" style="padding:0 10px"><i class="black-text mdi-navigation-menu"></i></a>
+                    <a href="/" class="brand-logo black-text" style="padding:0 10px">ICDMSDR16</a>
+                    <ul class="nav-mobile right hide-on-med-and-down">
+                        <li><a href="/" class="black-text waves-effect waves-light dropdown-button" data-activates="dropdown_home"  >Home</a></li>
+                        <li><a href="/themes" class="black-text waves-effect waves-light dropdown-button" data-activates="dropdown_themes">Themes</a></li>
+                        <li><a href="/registration" class="black-text waves-effect waves-light dropdown-button" data-activates="dropdown_reg">Registration</a></li>
+                        <li><a href="/committee" class="black-text waves-effect waves-light dropdown-button" data-activates="dropdown_comm">Committees</a></li>
+                        <li><a href="/places" class="black-text waves-effect waves-light">Places To Visit</a></li>
+                        <li><a href="/contacts" class="black-text waves-effect waves-light dropdown-button" data-activates="dropdown_contacts">Contact</a></li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/icdmsdrc">About ICDMSDRC</a></li>
+                        <li><a href="/nittrichy">About NIT Trichy</a></li>
+                        <li><a href="/themes">Themes</a></li>
+                        <li><a href="/speakers">Speakers</a></li>
+                        <li><a href="/registration">Registration</a></li>
+                        <li><a href="/abstractsubmission">Abstract Submission</a></li>
+                        <li><a href="/committee">Committees</a></li>
+                        <li><a href="/organizing">Organizing Committee</a></li>
+                        <li><a href="/technical">Technical Advisory</a></li>
+                        <li><a href="/places">Places</a></li>
+                        <li><a href="/contacts">Contact</a></li>
+                        <li><a href="/accomodation">Accomodation</a></li>
+                        <li><a href="/reachtrichy">How to reach Trichy</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+<div class="row">
+    <div class="col s12">
+        <div class="card center-align">
+            <iframe src="https://docs.google.com/forms/d/1gIQ5wmvAGR1kRW0sblSivrUCDs1q4UHXnardXU-UjMk/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        </div>
+    </div>
+</div>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="/js/flipclock.min.js"></script>
+<script type="text/javascript" src="/js/materialize.min.js"></script>
+<script type="text/javascript" src="/js/canvas.js"></script>
+<script>
+$(document).ready(function(){
+    $('.slider').slider({
+        height: 285
+    });
+    var date = new Date(2016, 1, 22);
+    var now  = new Date();
+    var diff = (date.getTime()/1000) - (now.getTime()/1000);
+
+    $('#countdown').FlipClock(diff, {
+        countdown: true,
+        clockFace: 'DailyCounter'
+    });
+
+    $('.dropdown-button').dropdown({
+        inDuration: 300,
+        outDuration: 225,
+        constrain_width: false, // Does not change width of dropdown to that of the activator
+        hover: true, // Activate on hover
+        gutter: 0, // Spacing from edge
+        belowOrigin: true // Displays dropdown below the button
+    });
+
+    $(".button-collapse").sideNav();
+});
+</script>
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(100854973); }catch(e){}</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100854973ns.gif" /></p></noscript>
+</body>
+</html>
+
